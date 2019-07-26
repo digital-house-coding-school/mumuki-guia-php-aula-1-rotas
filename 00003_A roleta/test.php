@@ -1,4 +1,4 @@
-public function testRotaRoleta(): void {
+  public function testRotaRoleta(): void {
     $rotasGet = Route::$routesGet;
     
     $this->assertTrue(count($rotasGet) == 1, "Você precisa definir uma rota GET");
@@ -35,7 +35,7 @@ public function testRotaRoleta(): void {
     
     $resultado = $rota["action"](11);
     
-    $this->assertTrue(is_string($resultado), "El resultado al ingresar a /roleta/11 deveria ser uma string");
+    $this->assertTrue(is_string($resultado), "O resultado ao entrar na rota /roleta/11 deveria ser uma string");
     
     $this->assertTrue(strtolower($resultado) === "aposta no número 11", "O resultado ao entrar na rota /roleta/11, deveria ser 'Aposta no número 11', mas foi recebido '$resultado'");
   }
