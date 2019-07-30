@@ -1,5 +1,5 @@
 public function testRotaGet(): void {
-    $rotasGet = Route::$rotasGet;
+    $rotasGet = Route::$routesGet;
     
     $this->assertTrue(count($rotasGet) == 1, "Você precisa definir uma rota GET");
     
