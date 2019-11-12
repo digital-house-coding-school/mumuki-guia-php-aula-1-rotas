@@ -53,6 +53,11 @@ public function testRotaRoleta(): void {
     
     $resul = $rota["action"](50,1000);
     
+    $this->assertTrue(is_string($resul), "O resultado ao entrar na rota /roleta/-2/1000 devería ser uma string");
+    
+    $this->assertTrue(strtolower($resul) === "número inválido", "Ao entrar na rota /roleta/-2/1000, deveria ser 'Número inválido', mas foi recebido '$resul'");
+
+    
     $this->assertTrue(is_string($resul), "O resultado ao entrar na rota /roleta/50/1000 devería ser uma string");
     
     $this->assertTrue(strtolower($resul) === "número inválido", "Ao entrar na rota /roleta/50/1000, deveria ser 'Número inválido', mas foi recebido '$resul'");
